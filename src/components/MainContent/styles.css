@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box; /* Важно! */
+
+}
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 /* Основной контейнер */
 .main-content {
     flex: 1;
@@ -7,6 +19,9 @@
 
 /* Контейнер карточки */
 .ups-container {
+    /*max-width: 800px; !* Ограничиваем ширину контента *!*/
+    /*margin: 0 auto; !* Автоматические отступы по бокам *!*/
+    width: 100%;
     background-color: #F9F9FA;
     border-radius: 8px;
     padding: 20px;

@@ -12,9 +12,9 @@ function App() {
     };
 
     return (
-        <div style={{ display: 'flex' }}>
-            <Sidebar onSelectItem={handleSelectItem} />
-            <MainContent selectedItem={selectedItem} />
+        <div style={{display: 'flex'}}>
+            <Sidebar onSelectItem={handleSelectItem}/>
+            <MainContent selectedItem={selectedItem}/>
         </div>
     );
 }
