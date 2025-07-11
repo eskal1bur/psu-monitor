@@ -34,28 +34,743 @@ const MainContent = ({ selectedItem, devicesStatus }) => {
 
     return (
         <div className="main-content">
-            <h2 className="ups-title">{selectedItem}</h2>
-            <div className="ups-container">
-                <div className="ups-card">
-                    <div className="card-row">
-                        <span className="card-label"><b>Состояние ИБП</b></span>
-                        <span
-                            className="card-status"
-                            style={{
-                                backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
-                                color: statusStyles[devicesStatus[selectedItem]].textColor
-                            }}
-                        >
-                            {statusStyles[devicesStatus[selectedItem]].text}
-                        </span>
+            <div className="ups-main-container">
+                <h2 className="ups-title">{selectedItem}</h2>
+                <div className="ups-container">
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
                     </div>
-                    <div className="card-row">
-                        <span className="card-label">Нагрузка ИБП(%)</span>
-                        <span className="card-value">{upsData[selectedItem]?.load}</span>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
                     </div>
-                    <div className="card-row">
-                        <span className="card-label">Температура ИБП(C)</span>
-                        <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
+                    </div>
+
+                    <div className="ups-card">
+                        <div className="card-row">
+                            <span className="card-label"><b>Состояние ИБП</b></span>
+                            <span
+                                className="card-status"
+                                style={{
+                                    backgroundColor: statusStyles[devicesStatus[selectedItem]].color,
+                                    color: statusStyles[devicesStatus[selectedItem]].textColor
+                                }}
+                            >
+                                {statusStyles[devicesStatus[selectedItem]].text}
+                            </span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Нагрузка ИБП(%)</span>
+                            <span className="card-value">{upsData[selectedItem]?.load}</span>
+                        </div>
+                        <div className="card-row">
+                            <span className="card-label">Температура ИБП(C)</span>
+                            <span className="card-value">{upsData[selectedItem]?.temperature}</span>
+                        </div>
                     </div>
                 </div>
 

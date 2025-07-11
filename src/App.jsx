@@ -37,7 +37,11 @@ function App() {
                 devicesStatus={devicesStatus}
                 statusColors={statusColors}
             />
-            <MainContent selectedItem={selectedItem} devicesStatus={devicesStatus}/>
+            <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
+                <header style={{display:"flex",alignItems:"center", justifyContent:"center" ,backgroundColor:'blue', color:"white", height:'50px', }}>Header</header>
+                <MainContent selectedItem={selectedItem} devicesStatus={devicesStatus}/>
+            </div>
+
             <button
                 onClick={() => {
                     const statusOrder = ["good", "warning", "critical"];
