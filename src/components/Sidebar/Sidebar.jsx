@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SidebarItem from './SidebarItem';
 import './styles.css';
 
-const Sidebar = ({ onSelectItem }) => {
+const Sidebar = ({ onSelectItem, devicesStatus, statusColors }) => {
     const [expandedItems, setExpandedItems] = useState({
         radarSystems: false,
         kmpComponents: false,
@@ -32,24 +32,15 @@ const Sidebar = ({ onSelectItem }) => {
                     isExpanded={expandedItems.kmpComponents}
                     onClick={() => toggleExpand('kmpComponents')}
                 >
-                    <SidebarItem
-                        title="ИБП 1"
-                        statusColor="#4CAF50"
-                        onSelect={handleSelect}
-                        isFinalItem={true} // Помечаем как конечный элемент
-                    />
-                    <SidebarItem
-                        title="ИБП 2"
-                        statusColor="#FFC107"
-                        onSelect={handleSelect}
-                        isFinalItem={true}
-                    />
-                    <SidebarItem
-                        title="ИБП 3"
-                        statusColor="#F44336"
-                        onSelect={handleSelect}
-                        isFinalItem={true}
-                    />
+                    {Object.keys(devicesStatus).map(deviceName => (
+                        <SidebarItem
+                            key={deviceName}
+                            title={deviceName}
+                            statusColor={statusColors[devicesStatus[deviceName]]}
+                            onSelect={handleSelect}
+                            isFinalItem={true}
+                        />
+                    ))}
                 </SidebarItem>
             </SidebarItem>
             <div className="exit-button">Выход</div>
