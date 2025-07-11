@@ -26,7 +26,7 @@ const SidebarItem = ({
         <div className="sidebar-item">
             <div className="sidebar-item-header" onClick={handleClick}>
                 {children && (
-                    <span className="arrow">{isExpanded ? '▼' : '►'}</span>
+                    <span className="arrow">{isExpanded ? '▼' : '⯈'}</span>
                 )}
                 {statusColor && (
                     <span
