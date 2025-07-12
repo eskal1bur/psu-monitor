@@ -6,12 +6,12 @@ const MainContent = ({ selectedItem, devicesStatus }) => {
     // Пример данных
     const upsData = {
         "ИБП 1": {
-            status: "ХОРОШО",
+            status: "ХОРОШО", // Не используется
             load: 12,
             temperature: 35
         },
         "ИБП 2": {
-            status: "НОРМА",
+            status: "УХУДШЕНИЕ", // Не используется
             load: 12,
             temperature: 35
         }
