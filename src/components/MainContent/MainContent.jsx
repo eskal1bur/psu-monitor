@@ -17,19 +17,6 @@ const MainContent = ({ selectedItem, devicesStatus }) => {
         }
     };
 
-    // const statusTexts = {
-    //     good: "ХОРОШО",
-    //     warning: "УХУДШЕНИЕ",
-    //     critical: "ОПАСНОСТЬ"
-    // };
-    //
-    // // Цвета для разных статусов
-    // const statusColors = {
-    //     good: "#28A34B",     // Зеленый
-    //     warning: "#FFEC17",  // Желтый
-    //     critical: "#D70000"  // Красный
-    // };
-
     if (!selectedItem) return null; // Просто не рендерим ничего
 
     return (
