@@ -12,30 +12,33 @@ const SidebarItem = ({
     const handleClick = (e) => {
         e.stopPropagation();
 
-        // Для конечных элементов вызываем onSelect
         if (isFinalItem && onSelect) {
             onSelect(title);
-        }
-        // Для родительских элементов - только раскрытие
-        else if (children && onClick) {
+        } else if (onClick) {
             onClick();
         }
     };
 
     return (
         <div className="sidebar-item">
-            <div className="sidebar-item-header" onClick={handleClick}>
-                {children && (
+            <div
+                className={`sidebar-item-header ${isFinalItem ? 'final-item' : ''}`}
+                onClick={handleClick}
+            >
+                {!isFinalItem && (
                     <span className="arrow">{isExpanded ? '▼' : '⯈'}</span>
                 )}
+
                 {statusStyles && (
                     <span
                         className="status-dot"
                         style={{ backgroundColor: statusStyles.backgroundColor }}
                     />
                 )}
+
                 <span className="title">{title}</span>
             </div>
+
             {isExpanded && children && (
                 <div className="sidebar-item-children">
                     {children}
