@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './normalize.css'
+import './App.css'
 import Sidebar from './components/Sidebar/Sidebar';
 import MainContent from './components/MainContent/MainContent';
 import { statusStyles } from '../src/constants/statusConfig.js';
@@ -42,23 +43,16 @@ function App() {
                 devicesData={devicesData}
             />
             <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
-                <header style={{display:"flex",alignItems:"center", justifyContent:"center" ,backgroundColor:'blue', color:"white", height:'50px', }}>Header</header>
+                <header className="app-header">Header</header>
                 <MainContent selectedItem={selectedItem} devicesData={devicesData}/>
             </div>
 
             <button
                 onClick={toggleDeviceStatus}
+                className="status-toggle-button"
                 style={{
-                    position: 'fixed',
-                    bottom: '20px',
-                    right: '20px',
-                    padding: '10px 15px',
                     background: statusStyle.backgroundColor,
                     color: statusStyle.titleColor,
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontWeight: 'bold'
                 }}
             >
                 {/*{`ИБП 1: ${statusTexts[devicesStatus["ИБП 1"]]}`}*/}

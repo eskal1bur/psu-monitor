@@ -25,8 +25,8 @@ const MainContent = ({ selectedItem, devicesData }) => {
                                     color: statusStyle.titleColor
                                 }}
                             >
-                {statusStyle.title}
-              </span>
+                                {statusStyle.title}
+                            </span>
                         </div>
                         <div className="card-row">
                             <span className="card-label">Нагрузка ИБП(%)</span>
