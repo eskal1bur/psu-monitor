@@ -1,4 +1,4 @@
-.app-header {
+.app__header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   height: 50px;
 }
 
-.status-toggle-button {
+.app__status-button {
   position: fixed;
   bottom: 20px;
   right: 20px;

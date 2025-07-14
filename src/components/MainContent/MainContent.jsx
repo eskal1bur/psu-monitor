@@ -12,14 +12,15 @@ const MainContent = ({ selectedItem, devicesData }) => {
 
     return (
         <div className="main-content">
-            <div className="ups-main-container">
-                <h2 className="ups-title">{selectedItem}</h2>
-                <div className="ups-container">
+            <div className="main-content__container">
+                <h2 className="main-content__title">{selectedItem}</h2>
+
+                <div className="main-content__ups-container">
                     <div className="ups-card">
-                        <div className="card-row">
-                            <span className="card-label"><b>Состояние ИБП</b></span>
+                        <div className="ups-card__row">
+                            <span className="ups-card__label"><b>Состояние ИБП</b></span>
                             <span
-                                className="card-status"
+                                className="ups-card__status"
                                 style={{
                                     backgroundColor: statusStyle.backgroundColor,
                                     color: statusStyle.titleColor
@@ -28,13 +29,15 @@ const MainContent = ({ selectedItem, devicesData }) => {
                                 {statusStyle.title}
                             </span>
                         </div>
-                        <div className="card-row">
-                            <span className="card-label">Нагрузка ИБП(%)</span>
-                            <span className="card-value">{device.load}</span>
+
+                        <div className="ups-card__row">
+                            <span className="ups-card__label">Нагрузка ИБП(%)</span>
+                            <span className="ups-card__value">{device.load}</span>
                         </div>
-                        <div className="card-row">
-                            <span className="card-label">Температура ИБП(C)</span>
-                            <span className="card-value">{device.temperature}</span>
+
+                        <div className="ups-card__row">
+                            <span className="ups-card__label">Температура ИБП(C)</span>
+                            <span className="ups-card__value">{device.temperature}</span>
                         </div>
                     </div>
                 </div>

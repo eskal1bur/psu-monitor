@@ -43,13 +43,13 @@ function App() {
                 devicesData={devicesData}
             />
             <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
-                <header className="app-header">Header</header>
+                <header className="app__header">Header</header>
                 <MainContent selectedItem={selectedItem} devicesData={devicesData}/>
             </div>
 
             <button
                 onClick={toggleDeviceStatus}
-                className="status-toggle-button"
+                className="app__status-button"
                 style={{
                     background: statusStyle.backgroundColor,
                     color: statusStyle.titleColor,

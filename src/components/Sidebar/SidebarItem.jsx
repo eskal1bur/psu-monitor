@@ -1,4 +1,5 @@
 import React from 'react';
+import './SidebarItem.css';
 
 const SidebarItem = ({
                          title,
@@ -20,27 +21,26 @@ const SidebarItem = ({
     };
 
     return (
-        <div className="sidebar-item">
-            <div
-                className={`sidebar-item-header ${isFinalItem ? 'final-item' : ''}`}
-                onClick={handleClick}
-            >
+        <div className={`sidebar-item ${isFinalItem ? 'sidebar-item--final' : ''}`}>
+            <div className="sidebar-item__header" onClick={handleClick}>
                 {!isFinalItem && (
-                    <span className="arrow">{isExpanded ? '▼' : '⯈'}</span>
+                    <span className="sidebar-item__arrow">
+                        {isExpanded ? '▼' : '⯈'}
+                    </span>
                 )}
 
                 {statusStyles && (
                     <span
-                        className="status-dot"
+                        className="sidebar-item__status-dot"
                         style={{ backgroundColor: statusStyles.backgroundColor }}
                     />
                 )}
 
-                <span className="title">{title}</span>
+                <span className="sidebar-item__title">{title}</span>
             </div>
 
             {isExpanded && children && (
-                <div className="sidebar-item-children">
+                <div className="sidebar-item__children">
                     {children}
                 </div>
             )}
