@@ -6,8 +6,8 @@ const SidebarItem = ({
                          isExpanded,
                          onClick,
                          onSelect,
-                         statusColor,
-                         isFinalItem = false // Новый пропс!
+                         statusStyles,
+                         isFinalItem = false
                      }) => {
     const handleClick = (e) => {
         e.stopPropagation();
@@ -28,10 +28,10 @@ const SidebarItem = ({
                 {children && (
                     <span className="arrow">{isExpanded ? '▼' : '⯈'}</span>
                 )}
-                {statusColor && (
+                {statusStyles && (
                     <span
                         className="status-dot"
-                        style={{ backgroundColor: statusColor }}
+                        style={{ backgroundColor: statusStyles.backgroundColor }}
                     />
                 )}
                 <span className="title">{title}</span>

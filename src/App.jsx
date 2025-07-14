@@ -35,7 +35,7 @@ function App() {
             <Sidebar
                 onSelectItem={handleSelectItem}
                 devicesStatus={devicesStatus}
-                statusColors={statusColors}
+                statusStyles={statusStyles}
             />
             <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
                 <header style={{display:"flex",alignItems:"center", justifyContent:"center" ,backgroundColor:'blue', color:"white", height:'50px', }}>Header</header>

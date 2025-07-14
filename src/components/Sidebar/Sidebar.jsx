@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import SidebarItem from './SidebarItem';
 import './Sidebar.css';
+import {statusStyles} from "../../constants/statusConfig.js";
 
-const Sidebar = ({ onSelectItem, devicesStatus, statusColors }) => {
+const Sidebar = ({ onSelectItem, devicesStatus, statusStyles }) => {
     const [expandedItems, setExpandedItems] = useState({
         radarSystems: false,
         kmpComponents: false,
@@ -36,7 +37,7 @@ const Sidebar = ({ onSelectItem, devicesStatus, statusColors }) => {
                         <SidebarItem
                             key={deviceName}
                             title={deviceName}
-                            statusColor={statusColors[devicesStatus[deviceName]]}
+                            statusStyles={statusStyles[devicesStatus[deviceName]]}
                             onSelect={handleSelect}
                             isFinalItem={true}
                         />
