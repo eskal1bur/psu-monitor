@@ -61,15 +61,16 @@ function App() {
                     bottom: '20px',
                     right: '20px',
                     padding: '10px 15px',
-                    background: statusStyles[devicesStatus['ИБП 1']].color,
-                    color: statusStyles[devicesStatus['ИБП 1']].textColor,
+                    background: statusStyles[devicesStatus['ИБП 1']].backgroundColor,
+                    color: statusStyles[devicesStatus['ИБП 1']].titleColor,
                     border: 'none',
                     borderRadius: '4px',
                     cursor: 'pointer',
                     fontWeight: 'bold'
                 }}
             >
-                {`ИБП 1: ${statusTexts[devicesStatus["ИБП 1"]]}`}
+                {/*{`ИБП 1: ${statusTexts[devicesStatus["ИБП 1"]]}`}*/}
+                {`ИБП 1: ${statusStyles[devicesStatus["ИБП 1"]].title}`}
             </button>
         </div>
     );

@@ -12,18 +12,18 @@ export const statusTexts = {
 
 export const statusStyles = {
     good: {
-        color: "#28A34B",
-        textColor: "white",
-        text: "ХОРОШО"
+        title: "ХОРОШО",
+        titleColor: "white",
+        backgroundColor: "#28A34B"
     },
     warning: {
-        color: "#FFEC17",
-        textColor: "black",  // Черный текст для желтого фона
-        text: "УХУДШЕНИЕ"
+        title: "УХУДШЕНИЕ",
+        titleColor: "black",  // Черный текст для желтого фона
+        backgroundColor: "#FFEC17"
     },
     critical: {
-        color: "#D70000",
-        textColor: "white",
-        text: "ОПАСНОСТЬ"
+        title: "ОПАСНОСТЬ",
+        titleColor: "white",
+        backgroundColor: "#D70000"
     }
 };

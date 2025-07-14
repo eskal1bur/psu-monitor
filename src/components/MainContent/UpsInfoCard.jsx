@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './MainContent.css';
 
 const UpsInfoCard = ({ data }) => {
     return (

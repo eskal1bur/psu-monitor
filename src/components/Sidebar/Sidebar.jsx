@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SidebarItem from './SidebarItem';
-import './styles.css';
+import './Sidebar.css';
 
 const Sidebar = ({ onSelectItem, devicesStatus, statusColors }) => {
     const [expandedItems, setExpandedItems] = useState({
