@@ -45,14 +45,30 @@ const MainContent = ({ selectedItem, devicesData }) => {
 
                     <div className="ups-card">
                         <div className="ups-card__row">
-                            <span className="ups-card__label"><b>Режим работы</b></span>
+                            <span className="ups-card__label"><b>Режим работы</b>
+                            </span>
                             <span
-                                className="ups-card__status_simple-text"
+                                className="ups-card__status_simple-text tooltip-container"
                                 style={{
                                     color: powerStatusStyle.titleColor,
                                 }}
                             >
                                 {powerStatusStyle.title}
+                                <span className="tooltip-icon">?</span>
+                                <div className="tooltip">
+                                    <p><strong>Возможные режимы:</strong></p>
+                                    <ul>
+                                        <li style={{color: powerStatusStyles.networkPowered.titleColor}}>
+                                            {powerStatusStyles.networkPowered.title}
+                                        </li>
+                                        <li style={{color: powerStatusStyles.batteryPowered.titleColor}}>
+                                            {powerStatusStyles.batteryPowered.title}
+                                        </li>
+                                        <li style={{color: powerStatusStyles.off.titleColor}}>
+                                            {powerStatusStyles.off.title}
+                                        </li>
+                                    </ul>
+                                </div>
                             </span>
                         </div>
                         <div className="ups-card__row">

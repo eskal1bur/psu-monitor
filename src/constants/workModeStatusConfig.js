@@ -5,7 +5,7 @@ export const powerStatusStyles = {
     },
     batteryPowered: {
         title: "Питание от батареи",
-        titleColor: "#FFEC17",
+        titleColor: "#d3c214",
     },
     off: {
         title: "Отключено",

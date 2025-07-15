@@ -46,6 +46,54 @@ html, body, #root {
     overflow-y: auto;
 }
 
+/*.ups-card {*/
+/*    min-width: 300px;*/
+/*    width: auto;*/
+/*    padding: 20px 20px 10px 20px;*/
+/*    background-color: #FFFEFF;*/
+/*    border-radius: 6px;*/
+/*    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.ups-card__row {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    !*min-width: 250px;*!*/
+/*    gap: 15px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.ups-card__label {*/
+/*    !*min-width: 150px;*!*/
+/*    text-align: left;*/
+/*    font-size: 14px;*/
+/*    color: #555;*/
+/*}*/
+
+/*.ups-card__value {*/
+/*    min-width: 50px;*/
+/*    text-align: right;*/
+/*    font-size: 14px;*/
+/*    color: #333;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*.ups-card__status {*/
+/*    padding: 4px 12px;*/
+/*    border-radius: 12px;*/
+/*    color: white;*/
+/*    font-size: 12px;*/
+/*    font-weight: 500;*/
+/*    !*background-color: #28A34B;*!*/
+/*}*/
+
+/*.ups-card__status_simple-text {*/
+/*    font-weight: bold;*/
+/*    text-align: left;*/
+/*    font-size: 14px;*/
+/*    color: #555;*/
+/*}*/
+
 .ups-card {
     min-width: 300px;
     width: auto;
@@ -53,21 +101,22 @@ html, body, #root {
     background-color: #FFFEFF;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: grid; /* Новый: весь card как grid */
+    grid-template-columns: max-content auto; /* Левая колонка по max label, правая — остальное */
+    gap: 15px 15px; /* Gap между строками и колонками */
+    align-items: baseline;
 }
 
 .ups-card__row {
-    display: flex;
-    justify-content: space-between;
-    /*min-width: 250px;*/
-    gap: 15px;
-    margin-bottom: 10px;
+    display: contents; /* Rows не нужны как flex, они "растворяются" в grid */
+    /* Удалите justify-content, gap и margin-bottom — grid их заменит */
 }
 
 .ups-card__label {
-    /*min-width: 150px;*/
     text-align: left;
     font-size: 14px;
     color: #555;
+    justify-self: start; /* Выравнивание в grid */
 }
 
 .ups-card__value {
@@ -76,6 +125,7 @@ html, body, #root {
     font-size: 14px;
     color: #333;
     font-weight: 500;
+    justify-self: end; /* Values прижимаются вправо */
 }
 
 .ups-card__status {
@@ -84,12 +134,71 @@ html, body, #root {
     color: white;
     font-size: 12px;
     font-weight: 500;
-    /*background-color: #28A34B;*/
+    justify-self: end; /* Status тоже вправо */
 }
 
 .ups-card__status_simple-text {
     font-weight: bold;
-    text-align: left;
+    text-align: left; /* Для простого текста — left, но в grid он будет в правой колонке */
     font-size: 14px;
     color: #555;
+    justify-self: end;
+}
+
+.tooltip-container {
+    position: relative; /* Для позиционирования тултипа */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Расстояние между лейблом и иконкой */
+}
+
+.tooltip-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%; /* Круг */
+    background-color: #ccc; /* Серый фон, можно изменить */
+    color: #fff; /* Белый "?" */
+    font-size: 12px;
+    font-weight: bold;
+    cursor: help; /* Курсор подсказки */
+}
+
+.tooltip {
+    position: absolute;
+    top: 100%; /* Под иконкой */
+    left: 0;
+    z-index: 10;
+    width: 200px; /* Ширина тултипа */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    color: #333;
+    visibility: hidden; /* Скрыт по умолчанию */
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible; /* Показ на hover */
+    opacity: 1;
+}
+
+.tooltip p {
+    margin: 0 0 10px 0; /* Минимальный отступ снизу, или 0 если совсем без */
+}
+
+.tooltip ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tooltip li {
+    margin-bottom: 5px;
 }
