@@ -17,7 +17,7 @@ html, body, #root {
 }
 
 .main-content__container {
-    max-width: 1300px;
+    max-width: 1500px;
     height: 70vh;
     max-height: 900px;
     margin: 0 auto;
@@ -37,6 +37,7 @@ html, body, #root {
     width: fit-content;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: center;
     gap: 15px;
     background-color: #F9F9FA;
@@ -97,7 +98,8 @@ html, body, #root {
 .ups-card {
     min-width: 300px;
     width: auto;
-    padding: 20px 20px 10px 20px;
+    /*padding: 20px 20px 10px 20px;*/
+    padding: 20px;
     background-color: #FFFEFF;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -105,6 +107,7 @@ html, body, #root {
     grid-template-columns: max-content auto; /* Левая колонка по max label, правая — остальное */
     gap: 15px 15px; /* Gap между строками и колонками */
     align-items: baseline;
+    align-content: start;
 }
 
 .ups-card__row {
