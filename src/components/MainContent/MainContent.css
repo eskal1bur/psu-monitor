@@ -58,13 +58,13 @@ html, body, #root {
 .ups-card__row {
     display: flex;
     justify-content: space-between;
-    min-width: 250px;
+    /*min-width: 250px;*/
     gap: 15px;
     margin-bottom: 10px;
 }
 
 .ups-card__label {
-    min-width: 150px;
+    /*min-width: 150px;*/
     text-align: left;
     font-size: 14px;
     color: #555;
@@ -84,5 +84,12 @@ html, body, #root {
     color: white;
     font-size: 12px;
     font-weight: 500;
-    background-color: #28A34B;
+    /*background-color: #28A34B;*/
+}
+
+.ups-card__status_simple-text {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    color: #555;
 }
