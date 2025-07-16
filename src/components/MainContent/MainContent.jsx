@@ -4,6 +4,9 @@ import './Tooltip.css'
 import { statusStyles } from '../../constants/statusConfig.js';
 import { powerStatusStyles } from '../../constants/workModeStatusConfig.js';
 
+import axios from 'axios';
+const API_URL = 'http://localhost:3001';
+
 const MainContent = ({ selectedItem, devicesData, setDevicesData }) => {
     if (!selectedItem) return null;
 
@@ -15,15 +18,12 @@ const MainContent = ({ selectedItem, devicesData, setDevicesData }) => {
     const powerStatusStyle = powerStatusStyles[device.workMode] || {};
 
     const handleModeChange = (mode) => {
-        // Обновляем состояние через setDevicesData
-        setDevicesData(prev => ({
-            ...prev,
-            [selectedItem]: {
-                ...prev[selectedItem],
-                workMode: mode  // Меняем workMode на новый (это изменит title и цвет)
-            }
-        }));
-        console.log(`Переключение режима на: ${mode}`);  // Можно оставить для отладки
+        axios.post(`${API_URL}/devices/${selectedItem}/mode`, { mode })
+            .then((response) => {
+                console.log('Mode changed:', response.data);
+                // Состояние обновится автоматически по WebSocket
+            })
+            .catch((error) => console.error('Error changing mode:', error));
     };
 
     return (
@@ -196,6 +196,7 @@ const MainContent = ({ selectedItem, devicesData, setDevicesData }) => {
                     </div>
 
                 </div>
+
             </div>
         </div>
     );

@@ -1,10 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import io from 'socket.io-client';
+import axios from 'axios';
+
 import './normalize.css'
 import './App.css'
 import Sidebar from './components/Sidebar/Sidebar';
 import MainContent from './components/MainContent/MainContent';
 import { statusStyles } from '../src/constants/statusConfig.js';
 import { initialDevicesData } from './data/data.js';
+
+const SOCKET_URL = 'http://localhost:3001'; // URL сервера
+const API_URL = 'http://localhost:3001';
 
 function App() {
     const [selectedItem, setSelectedItem] = useState(null);
@@ -14,6 +20,22 @@ function App() {
         // console.log("App received selection:", title);
         setSelectedItem(title);
     };
+
+    useEffect(() => {
+        // Подключение к WebSocket
+        const socket = io(SOCKET_URL);
+        socket.on('devicesUpdate', (updatedData) => {
+            setDevicesData(updatedData);
+            console.log('Received update from server:', updatedData);
+        });
+
+        // Начальная загрузка данных по API
+        axios.get(`${API_URL}/devices`)
+            .then((response) => setDevicesData(response.data))
+            .catch((error) => console.error('Error fetching devices:', error));
+
+        return () => socket.disconnect(); // Cleanup
+    }, []);
 
     const toggleDeviceStatus = () => {
         const statusOrder = ["good", "warning", "critical"];
