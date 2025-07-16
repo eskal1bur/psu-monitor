@@ -1,8 +1,8 @@
 .tooltip-container {
-    position: relative; /* Для позиционирования тултипа */
+    position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 5px; /* Расстояние между лейблом и иконкой */
+    gap: 5px;
 }
 
 .tooltip-icon {
@@ -11,20 +11,20 @@
     align-items: center;
     width: 16px;
     height: 16px;
-    border-radius: 50%; /* Круг */
-    background-color: #ccc; /* Серый фон, можно изменить */
-    color: #fff; /* Белый "?" */
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
     font-size: 12px;
     font-weight: bold;
-    cursor: help; /* Курсор подсказки */
+    cursor: help;
 }
 
 .tooltip {
     position: absolute;
-    top: 100%; /* Под иконкой */
+    top: 100%;
     left: 0;
     z-index: 10;
-    width: 200px; /* Ширина тултипа */
+    width: 200px;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -32,18 +32,18 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 12px;
     color: #333;
-    visibility: hidden; /* Скрыт по умолчанию */
+    visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .tooltip-container:hover .tooltip {
-    visibility: visible; /* Показ на hover */
+    visibility: visible;
     opacity: 1;
 }
 
 .tooltip p {
-    margin: 0 0 10px 0; /* Минимальный отступ снизу, или 0 если совсем без */
+    margin: 0 0 10px 0;
 }
 
 .tooltip ul {

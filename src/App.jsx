@@ -9,7 +9,7 @@ import MainContent from './components/MainContent/MainContent';
 import { statusStyles } from '../src/constants/statusConfig.js';
 import { initialDevicesData } from './data/data.js';
 
-const SOCKET_URL = 'http://localhost:3001'; // URL сервера
+const SOCKET_URL = 'http://localhost:3001';
 const API_URL = 'http://localhost:3001';
 
 function App() {
@@ -36,24 +36,6 @@ function App() {
         return () => socket.disconnect(); // Cleanup
     }, []);
 
-    const toggleDeviceStatus = () => {
-        const statusOrder = ["good", "warning", "critical"];
-
-        setDevicesData(prev => {
-            const currentStatus = prev["ИБП 1"].status;
-            const currentIndex = statusOrder.indexOf(currentStatus);
-            const nextIndex = (currentIndex + 1) % statusOrder.length;
-
-            return {
-                ...prev,
-                "ИБП 1": {
-                    ...prev["ИБП 1"],
-                    status: statusOrder[nextIndex]
-                }
-            };
-        });
-    };
-
     const currentStatus = devicesData["ИБП 1"]?.status;
     const statusStyle = statusStyles[currentStatus] || {};
 
@@ -67,17 +49,6 @@ function App() {
                 <header className="app__header">Header</header>
                 <MainContent selectedItem={selectedItem} devicesData={devicesData} setDevicesData={setDevicesData}/>
             </div>
-
-            <button
-                onClick={toggleDeviceStatus}
-                className="app__status-button"
-                style={{
-                    background: statusStyle.backgroundColor,
-                    color: statusStyle.titleColor,
-                }}
-            >
-                {`ИБП 1: ${statusStyle.title}`}
-            </button>
         </div>
     );
 }
