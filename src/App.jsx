@@ -55,8 +55,6 @@ function App() {
                     color: statusStyle.titleColor,
                 }}
             >
-                {/*{`ИБП 1: ${statusTexts[devicesStatus["ИБП 1"]]}`}*/}
-                {/*{`ИБП 1: ${statusStyles[devicesStatus["ИБП 1"]].title}`}*/}
                 {`ИБП 1: ${statusStyle.title}`}
             </button>
         </div>
