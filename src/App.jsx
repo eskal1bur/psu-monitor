@@ -17,7 +17,6 @@ function App() {
 
     const [devicesData, setDevicesData] = useState(initialDevicesData);
     const handleSelectItem = (title) => {
-        // console.log("App received selection:", title);
         setSelectedItem(title);
     };
 
