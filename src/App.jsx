@@ -44,7 +44,7 @@ function App() {
             />
             <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
                 <header className="app__header">Header</header>
-                <MainContent selectedItem={selectedItem} devicesData={devicesData}/>
+                <MainContent selectedItem={selectedItem} devicesData={devicesData} setDevicesData={setDevicesData}/>
             </div>
 
             <button

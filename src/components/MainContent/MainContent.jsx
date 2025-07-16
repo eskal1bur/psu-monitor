@@ -4,7 +4,7 @@ import './Tooltip.css'
 import { statusStyles } from '../../constants/statusConfig.js';
 import { powerStatusStyles } from '../../constants/workModeStatusConfig.js';
 
-const MainContent = ({ selectedItem, devicesData }) => {
+const MainContent = ({ selectedItem, devicesData, setDevicesData }) => {
     if (!selectedItem) return null;
 
     const device = devicesData[selectedItem];
@@ -13,6 +13,18 @@ const MainContent = ({ selectedItem, devicesData }) => {
     const statusStyle = statusStyles[device.status] || {};
     const batteryStatusStyle = statusStyles[device.batteryStatus] || {};
     const powerStatusStyle = powerStatusStyles[device.workMode] || {};
+
+    const handleModeChange = (mode) => {
+        // Обновляем состояние через setDevicesData
+        setDevicesData(prev => ({
+            ...prev,
+            [selectedItem]: {
+                ...prev[selectedItem],
+                workMode: mode  // Меняем workMode на новый (это изменит title и цвет)
+            }
+        }));
+        console.log(`Переключение режима на: ${mode}`);  // Можно оставить для отладки
+    };
 
     return (
         <div className="main-content">
@@ -44,7 +56,7 @@ const MainContent = ({ selectedItem, devicesData }) => {
                         </div>
                     </div>
 
-                    <div className="ups-card">
+                    <div className="ups-card ups-card_wide">
                         <div className="ups-card__row">
                             <span className="ups-card__label"><b>Режим работы</b>
                             </span>
@@ -83,10 +95,26 @@ const MainContent = ({ selectedItem, devicesData }) => {
                         <div className="ups-card__row">
                             <span className="ups-card__label">Входная частота(Hz)</span>
                             <span className="ups-card__value">{device.inputFrequency}</span>
+                        </div>
+                        <div className="ups-card__buttons">
+                            <button
+                                className="mode-button mode-button--on"
+                                onClick={() => handleModeChange('networkPowered')}
+                            >
+                                <span className="mode-circle"></span>
+                                <span className="mode-text">ВКЛ</span>
+                            </button>
+                            <button
+                                className="mode-button mode-button--off"
+                                onClick={() => handleModeChange('off')}
+                            >
+                                <span className="mode-circle"></span>
+                                <span className="mode-text">ВЫКЛ</span>
+                            </button>
                         </div>
                     </div>
 
-                    <div className="ups-card">
+                    <div className="ups-card ups-card_wide">
                         <div className="ups-card__row">
                             <span className="ups-card__label"><b>Режим работы</b>
                             </span>
@@ -125,6 +153,22 @@ const MainContent = ({ selectedItem, devicesData }) => {
                         <div className="ups-card__row">
                             <span className="ups-card__label">Входная частота(Hz)</span>
                             <span className="ups-card__value">{device.inputFrequency}</span>
+                        </div>
+                        <div className="ups-card__buttons">
+                            <button
+                                className="mode-button mode-button--on"
+                                onClick={() => handleModeChange('networkPowered')}
+                            >
+                                <span className="mode-circle"></span>
+                                <span className="mode-text">ВКЛ</span>
+                            </button>
+                            <button
+                                className="mode-button mode-button--off"
+                                onClick={() => handleModeChange('off')}
+                            >
+                                <span className="mode-circle"></span>
+                                <span className="mode-text">ВЫКЛ</span>
+                            </button>
                         </div>
                     </div>
 
