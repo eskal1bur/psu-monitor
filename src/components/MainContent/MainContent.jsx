@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainContent.css';
+import './Tooltip.css'
 import { statusStyles } from '../../constants/statusConfig.js';
 import { powerStatusStyles } from '../../constants/workModeStatusConfig.js';
 
