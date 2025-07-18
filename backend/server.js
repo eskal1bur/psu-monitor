@@ -19,9 +19,8 @@ app.use(cors({
     allowedHeaders: ['Content-Type'],
     credentials: true
 }));
-app.use(express.json()); // <<< Ключевой: парсит JSON-body
+app.use(express.json());
 
-// Роуты: ТЕПЕРЬ ПОСЛЕ middleware
 app.get('/', (req, res) => {
     res.send('Server is running!');
 });
@@ -37,7 +36,7 @@ app.get('/devices/:id', (req, res) => {
 });
 
 app.post('/devices/:id/mode', (req, res) => {
-    const { mode } = req.body; // Теперь req.body будет объектом
+    const { mode } = req.body;
     const validModes = ['networkPowered', 'batteryPowered', 'off'];
     if (!validModes.includes(mode)) return res.status(400).json({ error: 'Invalid mode' });
 
@@ -52,7 +51,7 @@ app.post('/devices/:id/mode', (req, res) => {
     res.json({ success: true, newMode: mode });
 });
 
-// Mock-данные (аналогично твоему initialDevicesData)
+// Mock-данные
 let devicesData = {
     "ИБП 1": {
         status: "good",  // ключ для получения стилей
@@ -117,15 +116,13 @@ let devicesData = {
 function generateMockUpdate() {
     Object.keys(devicesData).forEach((deviceId) => {
         const device = devicesData[deviceId];
-        // Симулируем изменения (случайные значения)
+
         device.load = Math.floor(Math.random() * 100); // 0-100%
         device.temperature = Math.floor(Math.random() * 10) + 20; // 20-30°C
         device.inputVoltage = 220 + Math.floor(Math.random() * 10 - 5); // 215-225V
-        // Иногда меняем статус (редко, для примера)
         if (Math.random() < 0.1) { // 10% шанс
             device.status = ['good', 'warning', 'critical'][Math.floor(Math.random() * 3)];
         }
-        // ... Добавь симуляцию для других полей
     });
 
     // Пушим обновление всем подключённым клиентам по WebSocket
@@ -133,7 +130,6 @@ function generateMockUpdate() {
     console.log('Mock update sent:', devicesData);
 }
 
-// Таймер для автоматических обновлений (каждые 5 сек)
 setInterval(generateMockUpdate, 5000);
 
 // WebSocket: Обработка подключений

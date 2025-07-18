@@ -33,7 +33,7 @@ function App() {
             .then((response) => setDevicesData(response.data))
             .catch((error) => console.error('Error fetching devices:', error));
 
-        return () => socket.disconnect(); // Cleanup
+        return () => socket.disconnect(); // Очистка
     }, []);
 
     const currentStatus = devicesData["ИБП 1"]?.status;
