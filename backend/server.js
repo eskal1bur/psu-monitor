@@ -13,7 +13,6 @@ const io = socketIo(server, {
     }
 });
 
-// Middleware: ДОЛЖНЫ БЫТЬ ПЕРЕД РОУТАМИ!
 app.use(cors({
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
